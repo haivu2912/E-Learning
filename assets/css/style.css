@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar{
+    display: flex;
+    padding: 0 30px;
+    height: 66px;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.navbar__logo img{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.navbar__logo-text{
+    font-size: 20px;
+    margin-left: 16px;
+    color: #333;
+}
+
+.navbar__search{
+    display: flex;
+    padding: 0 16px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__search-wrap{
+    width: 420px;
+    border: 1px solid #dce0e3;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 16px;
+}
+
+.navbar__search-wrap i{
+    color: #a8b2b8;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navbar__search-input{
+    width: 95%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.navbar__action{
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar__action i{
+    font-size: 18px;
+    color: #707070;
+    cursor: pointer;
+}
+
+.navbar__action i:hover{
+    color: #000;
+}
+
+#avatar{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+#bell{
+    margin-right: 8px;
+}
+
+#chat{
+    margin-left: 8px;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    min-width: 230px;
+    padding: 8px 0;
+}
+
+.dropdown-head{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0 24px;
+}
+
+.dropdown-head img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin:10px 0;
+    cursor: pointer;
+}
+
+.user-infor{
+    margin-left: 12px;
+}
+
+#user__name{
+    color: #292929;
+}
+
+#user__on-off{
+    margin-top: 4px;
+    font-size: 14px;
+    color: #757575;
+}
+
+.dropdown-item{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 24px;
+}
+
+.dropdown-item:hover{
+    background-color: #e8ebed;
+}
+
+.dropdown-icon{
+    color: #000;
+}
+
+.dropdown-text{
+    margin-left: 8px;
+    color: #666;
+}
+
+hr{
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,.05);
+}
+
+/* --------------------------------------------- */
+#main{
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebar{
+    z-index: 1;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 8px;
+}
+
+.sidebar__list{
+    list-style: none;
+}
+
+.sidebar__link{
+    width: 72px;
+    height: 72px;
+    display: flex;
+    text-decoration: none;
+    color: #404040;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-top: 4px;
+}
+
+.sidebar__link:hover{
+    background-color: #e8ebed;
+    color: #1a1a1a;
+}
+
+.sidebar__link i{
+    font-size: 18px;
+}
+
+.sidebar__link span{
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+/* ---------------------------------------- */
+#content{
+    width: calc(100% - 96px);
+    padding: 0 40px 0 20px;
+    margin-top: 15px;
+}
+
+
+
+.recent__course h2{
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.recent__course-list{
+    display: flex;
+    list-style: none;
+}
+
+.recent__course-item{
+    width: 320px;
+    margin-right: 24px;
+}
+
+.recent__course-item img{
+   width: 100%;
+   border-radius: 16px; 
+}
+
+.recent__course-item span{
+    color: #292929;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+/* ------------------------------------ */
+#all__course{
+    margin-top: 50px;
+    background-color: #f8f9fa;
+    padding: 16px 0;
+}
+
+#all__course h2{
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-left: 16px;
+}
+
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.filter__wrap{
+    display: flex;
+    position: relative;
+}
+
+.filter__btn{
+    padding: .375rem .75rem;
+    border: 1px solid #dee2e6;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.filter span{
+    font-size: 16px;
+}
+
+.filter i{
+    font-size: 14px;
+}
+
+.sort__wrap{
+    position: relative;
+    margin-right: 5px;
+}
+
+.display__wrap{
+    position: relative;
+    margin-left: 5px;
+}
+
+.dropdown__list{
+    position: absolute;
+    background-color: #fff;
+    padding: 8px 0;
+    width: 100%;
+    top: 100%;
+    list-style: none;
+    border: 1px solid rgba(0,0,0,.15);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.display__wrap .dropdown__list{
+    width: 150%;
+    left: -50%;
+}
+
+.dropdown__item{
+    padding: 10px 24px;
+}
+
+.dropdown__link{
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown__item:hover{
+    background-color: #e9ecef;   /*#ced4da*/
+}
+
+.all__course-list{
+    margin: 10px 0 50px;
+    display: flex;
+}
+
+.all__course-item{
+    list-style: none;
+    width: 25%;
+    background-color: #fff;
+    margin: 0 16px;
+}
+
+.cart-img{
+    background-image: url('../image/noimg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 7rem;
+}
+
+.card-body{
+    display: flex;
+    padding: 12px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ellipsis-wrap{
+   width: 36px;
+   height: 36px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   position: relative;
+}
+
+.ellipsis-wrap:hover{
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.ellipsis-wrap .dropdown__list{
+    position: absolute;
+    min-width: 10rem;
+    top: 105%;
+    right: 0;
+    font-size: 14px;
+}
+
+.ellipsis-wrap .dropdown__item{
+    padding: 10px 20px;
+}
+
+.card-footer{
+    padding: 12px;
+}
+
+.progress{
+    width: 100%;
+    height: 6px;
+    background-color: #60e8b5;
+    margin-bottom: 16px;
+}
+
+.card-footer-text{
+    font-size: 90%;
+}
