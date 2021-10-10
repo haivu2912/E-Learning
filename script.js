@@ -1,4 +1,4 @@
-const dropdownMenu = document.querySelector('.dropdown-menu')
+const dropdownUser = document.querySelector('.dropdown-user__menu')
 const avatar = document.querySelector('#avatar');
 
 const groupBtn1 = document.getElementsByClassName('filter__btn')[0];
@@ -11,17 +11,20 @@ const dropdownList3 = document.getElementsByClassName('dropdown__list')[2];
 const moreBtn = document.querySelector('.ellipsis-wrap');
 const dropdownList4 = document.querySelector('.ellipsis-wrap .dropdown__list');
 
-dropdownMenu.style.display = 'none';
+
+
+dropdownUser.style.display = 'none';
 dropdownList1.style.display = 'none';
 dropdownList2.style.display = 'none';
 dropdownList3.style.display = 'none';
 dropdownList4.style.display = 'none';
 
+
 avatar.onclick = () => {
-    if(dropdownMenu.style.display == 'none') {
-        dropdownMenu.style.display = 'block';
+    if(dropdownUser.style.display == 'none') {
+        dropdownUser.style.display = 'block';
     }else{
-        dropdownMenu.style.display = 'none';
+        dropdownUser.style.display = 'none';
     }
 }
 
@@ -56,3 +59,4 @@ moreBtn.onclick = () => {
         dropdownList4.style.display = 'none';
     }
 }
+

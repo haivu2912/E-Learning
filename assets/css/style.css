@@ -80,12 +80,14 @@ body{
 
 .navbar__action i{
     font-size: 18px;
+    width: 18px;
+    height: 18px;
     color: #707070;
     cursor: pointer;
 }
 
 .navbar__action i:hover{
-    color: #000;
+    color: #1a1a1a;
 }
 
 #avatar{
@@ -104,7 +106,7 @@ body{
     margin-left: 8px;
 }
 
-.dropdown-menu{
+.dropdown-user__menu{
     position: absolute;
     background-color: #fff;
     top: 100%;
@@ -112,14 +114,14 @@ body{
     padding: 8px 0;
 }
 
-.dropdown-head{
+.dropdown-user__head{
     display: flex;
     align-items: center;
     color: #fff;
     padding: 0 24px;
 }
 
-.dropdown-head img{
+.dropdown-user__head img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -132,7 +134,8 @@ body{
 }
 
 #user__name{
-    color: #292929;
+    /* color: #292929; */
+    color: #404040;
 }
 
 #user__on-off{
@@ -141,24 +144,32 @@ body{
     color: #757575;
 }
 
-.dropdown-item{
+.dropdown-user__item{
+    list-style: none;
+}
+
+.dropdown-user__link{
+    text-decoration: none;
     display: block;
     color: #fff;
-    text-decoration: none;
     padding: 10px 24px;
 }
 
-.dropdown-item:hover{
+.dropdown-user__item i{
+    color: #404040;
+}
+
+.dropdown-user__text{
+    margin-left: 8px;
+    color: #404040;
+}
+
+.dropdown-user__item:hover{
     background-color: #e8ebed;
 }
 
-.dropdown-icon{
-    color: #000;
-}
-
-.dropdown-text{
-    margin-left: 8px;
-    color: #666;
+.dropdown-user__item:hover i{
+    color: #1a1a1a;
 }
 
 hr{
@@ -175,12 +186,12 @@ hr{
 
 #sidebar{
     z-index: 1;
-    width: 100px;
+    width: 285px;
     flex-shrink: 0;
     display: flex;
-    align-items: center;
     flex-direction: column;
     padding: 0 8px;
+    margin-top: 15px;
 }
 
 .sidebar__list{
@@ -188,7 +199,13 @@ hr{
 }
 
 .sidebar__link{
-    width: 72px;
+    position: relative;
+    display: block;
+    padding: 12px 22px;
+    background-color: #fff;
+    color: #404040;
+    text-decoration: none;
+    /* width: 72px;
     height: 72px;
     display: flex;
     text-decoration: none;
@@ -197,7 +214,7 @@ hr{
     align-items: center;
     justify-content: center;
     border-radius: 16px;
-    margin-top: 4px;
+    margin-top: 4px; */
 }
 
 .sidebar__link:hover{
@@ -207,16 +224,52 @@ hr{
 
 .sidebar__link i{
     font-size: 18px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-down{
+    position: absolute;
+    right: 22px;
 }
 
 .sidebar__link span{
-    font-size: 16px;
-    margin-top: 6px;
+    margin-left: 10px;
 }
 
+.sidebar__sub-list{
+   
+}
+
+.sidebar__sub-item{
+    text-decoration: none;
+}
+
+.sidebar__sub-link{
+    display: block;
+    padding: 12px 30px;
+    color: #404040;
+    text-decoration: none;
+}
+
+.sidebar__sub-link i{
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar__sub-link span{
+    margin-left: 5px;
+}
+
+.sidebar__sub-link:hover{
+    background-color: #e8ebed;
+}
 /* ---------------------------------------- */
 #content{
-    width: calc(100% - 96px);
+    width: calc(100% - 285px);
     padding: 0 40px 0 20px;
     margin-top: 15px;
 }
